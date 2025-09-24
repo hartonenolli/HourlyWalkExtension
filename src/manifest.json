@@ -15,6 +15,7 @@
         "48": "icon.png"
     },
     "action": {
-        "default_icon": "icon.png"
+        "default_icon": "icon.png",
+        "default_popup": "setup.html"
     }
 }

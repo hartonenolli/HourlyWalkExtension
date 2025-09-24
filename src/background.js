@@ -1,7 +1,22 @@
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("Extension Installed");
+  setUpWindow();
   chrome.alarms.create("walkReminder", { periodInMinutes: 0.25 });
 });
+
+chrome.runtime.onStartup.addListener(() => {
+  setUpWindow();
+  chrome.alarms.create("walkReminder", { periodInMinutes: 0.25 });
+});
+
+function setUpWindow() {
+  chrome.windows.create({
+    url: "setup.html",
+    type: "popup",
+    width: 400,
+    height: 600,
+  });
+}
+
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "walkReminder") {
     chrome.notifications.create({
