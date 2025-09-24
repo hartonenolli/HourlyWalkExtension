@@ -1,11 +1,9 @@
 chrome.runtime.onInstalled.addListener(() => {
   setUpWindow();
-  chrome.alarms.create("walkReminder", { periodInMinutes: 0.25 });
 });
 
 chrome.runtime.onStartup.addListener(() => {
   setUpWindow();
-  chrome.alarms.create("walkReminder", { periodInMinutes: 0.25 });
 });
 
 function setUpWindow() {
@@ -16,6 +14,19 @@ function setUpWindow() {
     height: 600,
   });
 }
+
+// Function to set or clear the alarm
+function setWalkReminder(minutes) {
+  chrome.alarms.create("walkReminder", { periodInMinutes: minutes });
+}
+
+// Listen for messages from setup.js
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'setInterval' && typeof request.minutes === 'number') {
+    setWalkReminder(request.minutes);
+    sendResponse({ status: 'success' });
+  }
+});
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === "walkReminder") {
