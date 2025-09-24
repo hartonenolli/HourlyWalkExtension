@@ -26,6 +26,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     setWalkReminder(request.minutes);
     sendResponse({ status: 'success' });
   }
+  return true;
 });
 
 chrome.alarms.onAlarm.addListener((alarm) => {

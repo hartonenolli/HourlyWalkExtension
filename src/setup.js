@@ -4,6 +4,8 @@ document.querySelectorAll('button').forEach(button => {
     const minutes = parseFloat(button.getAttribute('data-minutes'));
     chrome.runtime.sendMessage({ action: 'setInterval', minutes });
     console.log('Sent message to set interval:', minutes);
-    window.close();
+    timer = setTimeout(() => {
+      window.close();
+    }, 300); // Close after 0.3 seconds
   });
 });
