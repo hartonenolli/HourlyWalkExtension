@@ -11,7 +11,7 @@ function setUpWindow() {
     url: "setup.html",
     type: "popup",
     width: 400,
-    height: 600,
+    height: 500,
   });
 }
 
