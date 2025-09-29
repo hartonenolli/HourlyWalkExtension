@@ -37,4 +37,4 @@ Press "Load unpaced" and select the src folder of the repository you copied:
 After these steps, the application is up and running in your Chrome browser!
 
 ## <a id="project"></a>Project presentation
-[Version 1, 29.09.2025](https://github.com/hartonenolli/HourlyWaldExtension/blob/main/diary/version1.md)
+[Version 1, 29.09.2025](https://github.com/hartonenolli/HourlyWalkExtension/blob/main/diary/version1.md)
