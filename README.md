@@ -35,6 +35,10 @@ Press "Load unpaced" and select the src folder of the repository you copied:
 
 ![Select src](https://github.com/hartonenolli/HourlyWalkExtension/blob/main/src/pictures/srcSelection.png)
 
+You will see the extension loaded:
+
+![Loaded](https://github.com/hartonenolli/HourlyWalkExtension/blob/main/src/pictures/extensionDownloaded.png)
+
 After these steps, the application is up and running in your Chrome browser!
 
 ## <a id="project"></a>Project presentation
