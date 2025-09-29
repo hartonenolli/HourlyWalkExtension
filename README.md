@@ -18,7 +18,8 @@ When working, researching, studying, coding, or just browsing, an hour can go by
 | Popup  | A window that reminds you how often you should exercise.   |
 
 ### Graphical information model
-TBD
+
+![UML](https://github.com/hartonenolli/HourlyWalkExtension/blob/main/src/pictures/UML.png)
 
 ## <a id="installation"></a>Installation
 To download the extension to your Chrome browser, you must first copy the repository:
